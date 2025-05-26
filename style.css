@@ -1,0 +1,14 @@
+/*reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*root*/
+:root {
+    --primary-color: #212A31;
+    --secondary-color: #d3d9d4;
+    --tertiary-color: #748d92;
+
+}
