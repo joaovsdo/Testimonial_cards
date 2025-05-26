@@ -12,3 +12,49 @@
     --tertiary-color: #748d92;
 
 }
+
+img {
+    height: 10rem;
+}
+
+/*Main grid*/
+.cards-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-area: 
+        "row-one"
+        "row-two"
+        "row-three";
+}
+
+.cards-container > *,
+.cards-container > * > * {
+    display: grid;
+}
+
+.row-one {
+    border: 1px solid var(--primary-color);
+    grid-template-columns: repeat(2, 1fr);
+    grid-area: 
+        "first-card second-card"
+    ;
+}
+
+.profile-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-area: 
+        "profile-pic profile-info"
+    ;
+}
+
+.row-two{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.star {
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid black;
+}
