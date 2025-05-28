@@ -14,7 +14,8 @@
 }
 
 .first-card > img,
-.second-card > img {
+.second-card > img, 
+.slide-img > img{
     height: 10rem;
 }
 
@@ -36,7 +37,7 @@
 
 .cards-container > *,
 .card-item > * {
-    border: 1px solid black;    
+   
     display: grid;
     gap: 1.5rem;
 }
@@ -64,8 +65,15 @@
 }
 
 .fourth-card {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     grid-area: card-four;
+    border: 2px solid var(--primary-color);
+    border-radius: 30px;
+    text-align: center;
+    padding: 3rem 8rem;
 }
 
 .card-item-element {
@@ -87,7 +95,6 @@
 }
 
 .profile-card > * {
-    border: 1px solid red;
     place-content: center;
 }
 
@@ -147,3 +154,38 @@
     color: var(--tertiary-color);
 }
 
+/* Fourth card */
+.slide {
+    display: flex;
+    gap: 4rem;
+    
+}
+
+.slide-img {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.slide-img > img {
+    height: 6rem;
+    border-radius: 50%;
+}
+
+.slide-img > img:first-child, 
+.slide-img > img:last-child{
+    height: 4rem;
+    filter: blur(2px) brightness(1.1) opacity(0.8);
+}
+
+
+.slide > button {
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: 0;
+}
+
+.slide > button:hover{
+    font-weight: bold;
+    font-size: 1.7rem;
+}
