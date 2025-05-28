@@ -10,7 +10,7 @@
     --primary-color: #212A31;
     --secondary-color: #d3d9d4;
     --tertiary-color: #748d92;
-
+    --font-size: 1.8rem;
 }
 
 img {
@@ -19,38 +19,83 @@ img {
 
 /*Main grid*/
 .cards-container {
+    font-size: var(--font-size);
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, 1fr);
-    grid-area: 
-        "row-one"
-        "row-two"
-        "row-three";
+    grid-template-areas: 
+        "card-one card-two"
+        "card-three card-three"
+        "card-four card-four"
+        ;
+    gap: 2rem;
+    margin: 1rem 1rem;
+    
 }
 
 .cards-container > *,
-.cards-container > * > * {
+.card-item > * {
+    border: 1px solid black;    
     display: grid;
+    gap: 1.5rem;
 }
 
-.row-one {
-    border: 1px solid var(--primary-color);
-    grid-template-columns: repeat(2, 1fr);
-    grid-area: 
-        "first-card second-card"
-    ;
+.first-card {
+    grid-area: card-one;
+    justify-items: start;
 }
 
-.profile-card {
+.second-card {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-area: 
-        "profile-pic profile-info"
-    ;
+    grid-area: card-two;
+    padding: 1.5rem;
+    gap: 2.5rem;
+    place-content: center;
+    border: 2px solid var(--primary-color);
+    border-radius: 30px;
 }
 
-.row-two{
-    grid-template-columns: repeat(2, 1fr);
+.third-card {
+    display: grid;
+    grid-area: card-three;
+}
+
+.fourth-card {
+    display: grid;
+    grid-area: card-four;
+}
+
+.card-item-element {
+    grid-template-columns: 1fr 3fr;
+    place-content: center;
+
+}
+
+.balloon-comment {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    place-content: center;
+    padding-inline: 1.5rem;
+    border-radius: 30px;
+}
+
+.first-card .profile-card {
+    padding-left: 1rem;
+}
+
+.profile-card > * {
+    border: 1px solid red;
+    place-content: center;
+}
+
+.profile-pic {
+    height: 6rem;
+    border-radius: 50px;
+    
+}
+
+.profile-position {
+    font-size: 1.3rem;
 }
 
 .star {
